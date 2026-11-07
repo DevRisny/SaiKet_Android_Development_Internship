@@ -1,0 +1,41 @@
+name: Release APKs
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Test and build release APKs
+        run: ./gradlew testDebugUnitTest assembleRelease --stacktrace
+
+      - name: Name the APKs
+        run: |
+          mkdir -p apks
+          cp Task1_QuizApp/build/outputs/apk/release/Task1_QuizApp-release.apk apks/Task1_QuizSpark_QuizApp.apk
+          cp Task2_ImageGallery/build/outputs/apk/release/Task2_ImageGallery-release.apk apks/Task2_PixelGrid_ImageGallery.apk
+          cp Task3_ContactsList/build/outputs/apk/release/Task3_ContactsList-release.apk apks/Task3_ContactBook_ContactsList.apk
+          cp Task4_ActivitySwitch/build/outputs/apk/release/Task4_ActivitySwitch-release.apk apks/Task4_Relay_ActivitySwitch.apk
+          cp Task5_TimerApp/build/outputs/apk/release/Task5_TimerApp-release.apk apks/Task5_Tempo_TimerApp.apk
+
+      - name: Publish the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ github.ref_name }}" apks/*.apk \
+            --title "SaiKet Android Internship · 5 apps (${{ github.ref_name }})" \
+            --notes-file .github/RELEASE_NOTES.md

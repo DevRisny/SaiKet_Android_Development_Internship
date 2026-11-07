@@ -123,7 +123,7 @@ All screenshots below are real captures from an Android 14 emulator, taken autom
 
 | Kind | What | Where it runs |
 |---|---|---|
-| **Unit tests** | 43 JUnit tests for the plain-Java logic (quiz engine, gallery navigation, contact helpers, message checks, stopwatch) | Every push, [Android CI](.github/workflows/android.yml) |
+| **Unit tests** | 44 JUnit tests for the plain-Java logic (quiz engine, gallery navigation, contact helpers, message checks, stopwatch) | Every push, [Android CI](.github/workflows/android.yml) |
 | **UI tests** | 5 Espresso / UI Automator tests, one full user journey per app | Android 14 emulator, [Device UI tests](.github/workflows/device-tests.yml) |
 
 The device workflow also fills the emulator with sample contacts, records each app's screen and saves the screenshots used above.
