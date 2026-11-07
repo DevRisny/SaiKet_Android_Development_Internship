@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # to publish screenshots and videos to the ci-media branch
 
 jobs:
   emulator:
@@ -48,3 +48,14 @@ jobs:
         with:
           name: device-screenshots-and-videos
           path: device-output/
+
+      - name: Publish screenshots and videos to the ci-media branch
+        if: always()
+        run: |
+          cd device-output
+          git init -q -b ci-media
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Device screenshots and videos from run ${{ github.run_id }}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" ci-media
