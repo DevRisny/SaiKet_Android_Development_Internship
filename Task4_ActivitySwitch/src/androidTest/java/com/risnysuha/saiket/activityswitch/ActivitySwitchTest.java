@@ -28,6 +28,7 @@ public class ActivitySwitchTest {
 
     @Test
     public void messageTravelsBothWays() {
+        Shots.pause(1500);
         Shots.take("task4_1_activity_one");
         onView(withId(R.id.message_input)).perform(typeText(MESSAGE));
         closeSoftKeyboard();
@@ -46,7 +47,7 @@ public class ActivitySwitchTest {
         Shots.pause(900);
 
         onView(withId(R.id.reply_text)).check(matches(withText("Got it, thanks Risny!")));
-        onView(withId(R.id.reply_card)).check(matches(isDisplayed()));
+        onView(withId(R.id.reply_card)).perform(scrollTo()).check(matches(isDisplayed()));
         Shots.take("task4_4_reply");
     }
 }
