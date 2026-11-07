@@ -1,12 +1,23 @@
 package com.risnysuha.saiket.gallery;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.core.content.ContextCompat;
+
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.imageview.ShapeableImageView;
+import com.google.android.material.shape.ShapeAppearanceModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /** Shows the selected picture large, with previous / next buttons. */
 public class ImageViewerActivity extends AppCompatActivity {
@@ -19,6 +30,8 @@ public class ImageViewerActivity extends AppCompatActivity {
     private TextView title;
     private TextView caption;
     private TextView counter;
+    private HorizontalScrollView thumbsScroll;
+    private final List<ShapeableImageView> thumbs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +49,8 @@ public class ImageViewerActivity extends AppCompatActivity {
         title = findViewById(R.id.viewer_title);
         caption = findViewById(R.id.viewer_caption);
         counter = findViewById(R.id.viewer_counter);
+        thumbsScroll = findViewById(R.id.thumbs_scroll);
+        buildThumbnails(findViewById(R.id.thumbs_row));
 
         MaterialButton back = findViewById(R.id.back_button);
         MaterialButton previous = findViewById(R.id.previous_button);
@@ -66,10 +81,60 @@ public class ImageViewerActivity extends AppCompatActivity {
         title.setText(item.getTitle());
         caption.setText(item.getCaption());
         counter.setText(navigator.label());
+        highlightThumbnail();
         if (animate) {
             image.setAlpha(0.2f);
             image.setTranslationX(60f * direction);
             image.animate().alpha(1f).translationX(0f).setDuration(240).start();
         }
+    }
+
+    /** A strip of small pictures under the main one; tap any to jump to it. */
+    private void buildThumbnails(LinearLayout row) {
+        int size = dp(64);
+        int pad = dp(3);
+        List<GalleryItem> items = GalleryRepository.items();
+        for (int i = 0; i < items.size(); i++) {
+            ShapeableImageView thumb = new ShapeableImageView(this);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(size, size);
+            if (i < items.size() - 1) {
+                lp.setMarginEnd(dp(10));
+            }
+            thumb.setLayoutParams(lp);
+            thumb.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            thumb.setShapeAppearanceModel(ShapeAppearanceModel.builder().setAllCornerSizes(dp(16)).build());
+            thumb.setPadding(pad, pad, pad, pad);
+            thumb.setStrokeWidth(dp(3));
+            thumb.setImageResource(items.get(i).getImageRes());
+            thumb.setContentDescription(items.get(i).getTitle());
+            final int index = i;
+            thumb.setOnClickListener(v -> {
+                int direction = Integer.compare(index, navigator.getPosition());
+                navigator.jumpTo(index);
+                show(true, direction);
+            });
+            row.addView(thumb);
+            thumbs.add(thumb);
+        }
+    }
+
+    private void highlightThumbnail() {
+        int selected = navigator.getPosition();
+        int blue = ContextCompat.getColor(this, R.color.brand_blue);
+        for (int i = 0; i < thumbs.size(); i++) {
+            ShapeableImageView thumb = thumbs.get(i);
+            boolean on = i == selected;
+            thumb.setStrokeColor(ColorStateList.valueOf(on ? blue : Color.TRANSPARENT));
+            thumb.setAlpha(on ? 1f : 0.6f);
+        }
+        if (selected < thumbs.size()) {
+            ShapeableImageView current = thumbs.get(selected);
+            thumbsScroll.post(() -> thumbsScroll.smoothScrollTo(
+                    current.getLeft() - (thumbsScroll.getWidth() - current.getWidth()) / 2, 0));
+        }
+    }
+
+    private int dp(int value) {
+        return Math.round(value * getResources().getDisplayMetrics().density);
     }
 }

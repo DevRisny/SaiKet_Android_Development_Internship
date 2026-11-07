@@ -4,7 +4,9 @@ import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.Espresso.pressBack;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.anything;
@@ -36,6 +38,12 @@ public class GalleryAppTest {
         onView(withId(R.id.next_button)).perform(click());
         onView(withId(R.id.viewer_title)).check(matches(withText("Coral Bay")));
         Shots.take("task2_3_next");
+
+        // Jump with the thumbnail strip.
+        onView(withContentDescription("Snow Ridge")).perform(scrollTo(), click());
+        onView(withId(R.id.viewer_title)).check(matches(withText("Snow Ridge")));
+        onView(withId(R.id.viewer_counter)).check(matches(withText("11 / 12")));
+        Shots.take("task2_4_thumbnails");
 
         pressBack();
         Shots.pause(600);

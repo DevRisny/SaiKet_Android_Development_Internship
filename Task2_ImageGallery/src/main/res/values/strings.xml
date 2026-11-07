@@ -2,7 +2,7 @@
 <resources>
     <string name="count_format">%1$d images</string>
     <string name="tap_hint">Tap any picture to open it</string>
-    <string name="opening_format">Opening %1$s</string>
+    <string name="all_pictures">All pictures</string>
     <string name="previous">Previous</string>
     <string name="next">Next</string>
     <string name="back">Back to gallery</string>

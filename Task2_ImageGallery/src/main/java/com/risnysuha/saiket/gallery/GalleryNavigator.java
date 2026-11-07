@@ -28,6 +28,12 @@ public final class GalleryNavigator {
         return position;
     }
 
+    /** Jumps to a picture chosen in the thumbnail strip. */
+    public int jumpTo(int index) {
+        position = clamp(index);
+        return position;
+    }
+
     /** Human friendly counter, for example "3 / 12". */
     public String label() {
         return (position + 1) + " / " + count;

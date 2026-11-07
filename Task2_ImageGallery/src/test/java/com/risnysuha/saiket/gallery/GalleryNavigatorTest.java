@@ -36,4 +36,12 @@ public class GalleryNavigatorTest {
     public void emptyGalleryIsRejected() {
         new GalleryNavigator(0, 0);
     }
+
+    @Test
+    public void jumpToGoesStraightToAThumbnail() {
+        GalleryNavigator nav = new GalleryNavigator(12, 0);
+        assertEquals(7, nav.jumpTo(7));
+        assertEquals("8 / 12", nav.label());
+        assertEquals(11, nav.jumpTo(40));
+    }
 }

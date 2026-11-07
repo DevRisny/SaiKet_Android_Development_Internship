@@ -124,6 +124,28 @@
                 android:text="@string/original_art"
                 android:textColor="@color/brand_blue_dark"
                 android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="@string/all_pictures"
+                android:textAppearance="@style/TextAppearance.SaiKet.Label" />
+
+            <HorizontalScrollView
+                android:id="@+id/thumbs_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/thumbs_row"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
         </LinearLayout>
     </ScrollView>
 

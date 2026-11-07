@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.GridView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,8 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
  * OnItemClickListener opens the tapped picture in a full viewer.
  */
 public class MainActivity extends AppCompatActivity {
-
-    private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Step 3: react when the user selects an image.
         grid.setOnItemClickListener((parent, view, position, id) -> {
-            GalleryItem item = GalleryRepository.items().get(position);
-            showToast(getString(R.string.opening_format, item.getTitle()));
             Intent intent = new Intent(this, ImageViewerActivity.class)
                     .putExtra(ImageViewerActivity.EXTRA_POSITION, position);
             // A smooth zoom from the tapped cell.
@@ -42,13 +37,5 @@ public class MainActivity extends AppCompatActivity {
                     view, 0, 0, view.getWidth(), view.getHeight());
             startActivity(intent, options.toBundle());
         });
-    }
-
-    private void showToast(String message) {
-        if (toast != null) {
-            toast.cancel();
-        }
-        toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
-        toast.show();
     }
 }
