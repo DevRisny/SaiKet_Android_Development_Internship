@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="avatar_bg_1">#E3E9FF</color>
+    <color name="avatar_fg_1">#2848D8</color>
+    <color name="avatar_bg_2">#D9F5FA</color>
+    <color name="avatar_fg_2">#037F98</color>
+    <color name="avatar_bg_3">#E5F7EE</color>
+    <color name="avatar_fg_3">#0E8A5F</color>
+    <color name="avatar_bg_4">#FFF1D9</color>
+    <color name="avatar_fg_4">#B26A00</color>
+    <color name="avatar_bg_5">#FDE7EF</color>
+    <color name="avatar_fg_5">#C2366B</color>
+    <color name="avatar_bg_6">#EEE8FF</color>
+    <color name="avatar_fg_6">#6A45D6</color>
+</resources>

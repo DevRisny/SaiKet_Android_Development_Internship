@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question_label">Question</string>
+    <string name="choose_one">Choose one answer</string>
+    <string name="progress_format">Question %1$d of %2$d</string>
+    <string name="score_format">Score %1$d</string>
+    <string name="submit">Submit answer</string>
+    <string name="next_question">Next question</string>
+    <string name="see_score">See my score</string>
+    <string name="play_again">Play again</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="right_answer_format">The right answer is %1$s.</string>
+    <string name="pick_first">Please choose an answer first</string>
+    <string name="quiz_complete">Quiz complete</string>
+    <string name="final_score_format">%1$d / %2$d</string>
+    <string name="final_percent_format">%1$d%% correct</string>
+</resources>

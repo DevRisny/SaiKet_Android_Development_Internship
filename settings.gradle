@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'SaiKet_Android_Development_Internship'
+
+// One separate Android app for every task level, as the SaiKet brief asks.
+include ':Task1_QuizApp'
+include ':Task2_ImageGallery'
+include ':Task3_ContactsList'
+include ':Task4_ActivitySwitch'
+include ':Task5_TimerApp'

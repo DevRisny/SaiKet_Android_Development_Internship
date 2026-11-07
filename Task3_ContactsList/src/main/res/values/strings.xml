@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_hint">Search by name or number</string>
+    <string name="refresh">Refresh</string>
+    <string name="permission_title">Allow access to contacts</string>
+    <string name="permission_body">This app needs the READ_CONTACTS permission to show the names and numbers saved on your phone. Nothing leaves your device.</string>
+    <string name="permission_body_settings">Contacts permission is turned off. Open Settings, tap Permissions and allow Contacts to see your list here.</string>
+    <string name="allow_access">Allow access</string>
+    <string name="open_settings">Open settings</string>
+    <string name="empty_title">No contacts with a number</string>
+    <string name="empty_body">Save a contact with a phone number on this phone, then tap Refresh.</string>
+    <string name="no_match_title">No match</string>
+    <string name="no_match_body">Try another name or a few digits of the number.</string>
+    <string name="search_count_format">%1$d of %2$d contacts</string>
+    <string name="no_dialer_format">No dialer app found. Number: %1$s</string>
+    <string name="tap_to_call">Tap a contact to call</string>
+    <plurals name="contact_count">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+    <plurals name="header_count">
+        <item quantity="one">%d contact read from this phone</item>
+        <item quantity="other">%d contacts read from this phone</item>
+    </plurals>
+</resources>

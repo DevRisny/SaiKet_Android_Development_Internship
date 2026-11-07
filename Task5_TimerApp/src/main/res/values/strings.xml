@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="reset">Reset</string>
+    <string name="lap">Lap</string>
+    <string name="status_ready">Ready</string>
+    <string name="status_running">Running</string>
+    <string name="status_paused">Paused</string>
+    <string name="elapsed">elapsed time</string>
+    <string name="laps_label">Laps</string>
+    <string name="lap_format">Lap %1$d</string>
+    <string name="how_label">How it works</string>
+    <string name="how_body">A Handler posts a Runnable every second. Each tick reads SystemClock.elapsedRealtime(), so the time stays exact even if a tick is a little late.</string>
+    <plurals name="laps_count">
+        <item quantity="one">%d lap</item>
+        <item quantity="other">%d laps</item>
+    </plurals>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tempo</string>
+    <string name="brand_name">SAIKET SYSTEMS</string>
+    <string name="brand_program">Android Development Internship</string>
+    <string name="task_chip">TASK 5</string>
+    <string name="header_title">Timer App</string>
+    <string name="header_subtitle">A Handler updates the time every second</string>
+    <string name="built_by">Built by J. Risny Suha · SaiKet Systems Android Internship</string>
+</resources>

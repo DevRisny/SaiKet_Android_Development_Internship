@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ContactBook</string>
+    <string name="brand_name">SAIKET SYSTEMS</string>
+    <string name="brand_program">Android Development Internship</string>
+    <string name="task_chip">TASK 3</string>
+    <string name="header_title">My Contacts</string>
+    <string name="header_subtitle">Read from your phone with READ_CONTACTS</string>
+    <string name="built_by">Built by J. Risny Suha · SaiKet Systems Android Internship</string>
+</resources>
