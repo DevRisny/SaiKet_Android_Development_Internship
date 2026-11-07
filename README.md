@@ -57,11 +57,10 @@ All screenshots below are real captures from an Android 14 emulator, taken autom
 
 <table>
 <tr>
-<td align="center"><img src="docs/gifs/Task1_QuizApp.gif" width="200" alt="Task 1 · Quiz App demo"/><br/><sub><b>Live demo</b></sub></td>
-<td align="center"><img src="docs/screenshots/task1_1_question.png" width="200" alt="Question"/><br/><sub>Question</sub></td>
-<td align="center"><img src="docs/screenshots/task1_3_correct.png" width="200" alt="Correct!"/><br/><sub>Correct!</sub></td>
-<td align="center"><img src="docs/screenshots/task1_4_incorrect.png" width="200" alt="Incorrect"/><br/><sub>Incorrect</sub></td>
-<td align="center"><img src="docs/screenshots/task1_5_score.png" width="200" alt="Final score"/><br/><sub>Final score</sub></td>
+<td align="center"><img src="docs/gifs/Task1_QuizApp.gif" width="180" alt="Task 1 · Quiz App demo"/><br/><sub><b>Live demo</b></sub></td>
+<td align="center"><img src="docs/screenshots/task1_3_correct.png" width="180" alt="Correct!"/><br/><sub>Correct!</sub></td>
+<td align="center"><img src="docs/screenshots/task1_4_incorrect.png" width="180" alt="Incorrect"/><br/><sub>Incorrect</sub></td>
+<td align="center"><img src="docs/screenshots/task1_5_score.png" width="180" alt="Final score"/><br/><sub>Final score</sub></td>
 </tr>
 </table>
 
@@ -69,11 +68,10 @@ All screenshots below are real captures from an Android 14 emulator, taken autom
 
 <table>
 <tr>
-<td align="center"><img src="docs/gifs/Task2_ImageGallery.gif" width="200" alt="Task 2 · Image Gallery demo"/><br/><sub><b>Live demo</b></sub></td>
-<td align="center"><img src="docs/screenshots/task2_1_grid.png" width="200" alt="GridView"/><br/><sub>GridView</sub></td>
-<td align="center"><img src="docs/screenshots/task2_2_viewer.png" width="200" alt="Tapped picture"/><br/><sub>Tapped picture</sub></td>
-<td align="center"><img src="docs/screenshots/task2_4_thumbnails.png" width="200" alt="Thumbnail strip"/><br/><sub>Thumbnail strip</sub></td>
-<td align="center"><img src="docs/screenshots/task2_3_next.png" width="200" alt="Next picture"/><br/><sub>Next picture</sub></td>
+<td align="center"><img src="docs/gifs/Task2_ImageGallery.gif" width="180" alt="Task 2 · Image Gallery demo"/><br/><sub><b>Live demo</b></sub></td>
+<td align="center"><img src="docs/screenshots/task2_1_grid.png" width="180" alt="GridView"/><br/><sub>GridView</sub></td>
+<td align="center"><img src="docs/screenshots/task2_2_viewer.png" width="180" alt="Tapped picture"/><br/><sub>Tapped picture</sub></td>
+<td align="center"><img src="docs/screenshots/task2_4_thumbnails.png" width="180" alt="Thumbnail strip"/><br/><sub>Thumbnail strip</sub></td>
 </tr>
 </table>
 
@@ -81,10 +79,10 @@ All screenshots below are real captures from an Android 14 emulator, taken autom
 
 <table>
 <tr>
-<td align="center"><img src="docs/gifs/Task3_ContactsList.gif" width="200" alt="Task 3 · Contacts demo"/><br/><sub><b>Live demo</b></sub></td>
-<td align="center"><img src="docs/screenshots/task3_1_permission.png" width="200" alt="READ_CONTACTS"/><br/><sub>READ_CONTACTS</sub></td>
-<td align="center"><img src="docs/screenshots/task3_2_list.png" width="200" alt="ListView"/><br/><sub>ListView</sub></td>
-<td align="center"><img src="docs/screenshots/task3_3_search.png" width="200" alt="Search"/><br/><sub>Search</sub></td>
+<td align="center"><img src="docs/gifs/Task3_ContactsList.gif" width="180" alt="Task 3 · Contacts demo"/><br/><sub><b>Live demo</b></sub></td>
+<td align="center"><img src="docs/screenshots/task3_1_permission.png" width="180" alt="READ_CONTACTS"/><br/><sub>READ_CONTACTS</sub></td>
+<td align="center"><img src="docs/screenshots/task3_2_list.png" width="180" alt="ListView"/><br/><sub>ListView</sub></td>
+<td align="center"><img src="docs/screenshots/task3_3_search.png" width="180" alt="Search"/><br/><sub>Search</sub></td>
 </tr>
 </table>
 
@@ -92,10 +90,10 @@ All screenshots below are real captures from an Android 14 emulator, taken autom
 
 <table>
 <tr>
-<td align="center"><img src="docs/gifs/Task4_ActivitySwitch.gif" width="200" alt="Task 4 · Activity Switch demo"/><br/><sub><b>Live demo</b></sub></td>
-<td align="center"><img src="docs/screenshots/task4_2_typed.png" width="200" alt="ActivityOne"/><br/><sub>ActivityOne</sub></td>
-<td align="center"><img src="docs/screenshots/task4_3_activity_two.png" width="200" alt="ActivityTwo"/><br/><sub>ActivityTwo</sub></td>
-<td align="center"><img src="docs/screenshots/task4_4_reply.png" width="200" alt="Reply came back"/><br/><sub>Reply came back</sub></td>
+<td align="center"><img src="docs/gifs/Task4_ActivitySwitch.gif" width="180" alt="Task 4 · Activity Switch demo"/><br/><sub><b>Live demo</b></sub></td>
+<td align="center"><img src="docs/screenshots/task4_2_typed.png" width="180" alt="ActivityOne"/><br/><sub>ActivityOne</sub></td>
+<td align="center"><img src="docs/screenshots/task4_3_activity_two.png" width="180" alt="ActivityTwo"/><br/><sub>ActivityTwo</sub></td>
+<td align="center"><img src="docs/screenshots/task4_4_reply.png" width="180" alt="Reply came back"/><br/><sub>Reply came back</sub></td>
 </tr>
 </table>
 
@@ -103,10 +101,10 @@ All screenshots below are real captures from an Android 14 emulator, taken autom
 
 <table>
 <tr>
-<td align="center"><img src="docs/gifs/Task5_TimerApp.gif" width="200" alt="Task 5 · Timer demo"/><br/><sub><b>Live demo</b></sub></td>
-<td align="center"><img src="docs/screenshots/task5_1_ready.png" width="200" alt="Ready"/><br/><sub>Ready</sub></td>
-<td align="center"><img src="docs/screenshots/task5_2_running.png" width="200" alt="Running + laps"/><br/><sub>Running + laps</sub></td>
-<td align="center"><img src="docs/screenshots/task5_3_paused.png" width="200" alt="Paused"/><br/><sub>Paused</sub></td>
+<td align="center"><img src="docs/gifs/Task5_TimerApp.gif" width="180" alt="Task 5 · Timer demo"/><br/><sub><b>Live demo</b></sub></td>
+<td align="center"><img src="docs/screenshots/task5_1_ready.png" width="180" alt="Ready"/><br/><sub>Ready</sub></td>
+<td align="center"><img src="docs/screenshots/task5_2_running.png" width="180" alt="Running + laps"/><br/><sub>Running + laps</sub></td>
+<td align="center"><img src="docs/screenshots/task5_3_paused.png" width="180" alt="Paused"/><br/><sub>Paused</sub></td>
 </tr>
 </table>
 
