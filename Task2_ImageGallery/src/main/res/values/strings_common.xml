@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PixelGrid</string>
+    <string name="brand_name">SAIKET SYSTEMS</string>
+    <string name="brand_program">Android Development Internship</string>
+    <string name="task_chip">TASK 2</string>
+    <string name="header_title">Image Gallery</string>
+    <string name="header_subtitle">12 original scenes in a GridView</string>
+    <string name="built_by">Built by J. Risny Suha · SaiKet Systems Android Internship</string>
+</resources>

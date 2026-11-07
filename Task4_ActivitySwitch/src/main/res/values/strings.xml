@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flow_one">ActivityOne</string>
+    <string name="flow_intent">Intent + extras</string>
+    <string name="flow_two">ActivityTwo</string>
+    <string name="compose_label">Compose your message</string>
+    <string name="your_name">Your name</string>
+    <string name="default_name">Risny</string>
+    <string name="message_hint">Message for Activity Two</string>
+    <string name="suggestions_label">Quick messages</string>
+    <string name="suggest_1">Hello from Activity One! 👋</string>
+    <string name="suggest_2">Intents carry data between screens.</string>
+    <string name="suggest_3">SaiKet Systems Android Internship, Task 4 ✅</string>
+    <string name="send">Open Activity Two</string>
+    <string name="error_empty">Please type a message first</string>
+    <string name="error_long">Keep it under %1$d characters</string>
+    <string name="reply_label">Reply from Activity Two</string>
+    <string name="reply_note">Sent back with setResult() and received here.</string>
+    <string name="two_title">Activity Two</string>
+    <string name="two_subtitle">Data received through the Intent</string>
+    <string name="back">Back</string>
+    <string name="received_label">Message received</string>
+    <string name="meta_format">From %1$s  ·  sent at %2$s</string>
+    <string name="no_message">(no message was passed)</string>
+    <string name="stat_words">Words</string>
+    <string name="stat_chars">Characters</string>
+    <string name="stat_delivery">Delivered in</string>
+    <string name="extras_label">What the Intent carried</string>
+    <string name="reply_to_format">Reply to %1$s</string>
+    <string name="reply_hint">Type a reply (optional)</string>
+    <string name="default_reply">Got your message, thank you! 🙌</string>
+    <string name="send_reply">Send reply back</string>
+    <string name="back_to_one">Back to Activity One</string>
+</resources>

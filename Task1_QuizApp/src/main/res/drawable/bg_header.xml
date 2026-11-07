@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Brand gradient header with soft decorative circles. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:angle="315" android:startColor="@color/brand_blue" android:centerColor="#2F7BF5" android:endColor="@color/brand_cyan" />
+            <corners android:bottomLeftRadius="32dp" android:bottomRightRadius="32dp" />
+        </shape>
+    </item>
+    <item android:width="200dp" android:height="200dp" android:gravity="top|end" android:top="-70dp" android:right="-60dp">
+        <shape android:shape="oval"><solid android:color="#14FFFFFF" /></shape>
+    </item>
+    <item android:width="120dp" android:height="120dp" android:gravity="bottom|end" android:bottom="-30dp" android:right="70dp">
+        <shape android:shape="oval"><solid android:color="#10FFFFFF" /></shape>
+    </item>
+</layer-list>

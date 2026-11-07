@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Task 2 · Image Gallery: a GridView filled by ImageAdapter. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/view_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tap_hint"
+            android:textAppearance="@style/TextAppearance.SaiKet.Body" />
+
+        <TextView
+            android:id="@+id/gallery_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_soft_pill"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="12dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/brand_blue_dark"
+            android:textSize="13sp"
+            tools:text="12 images" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gallery_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:drawSelectorOnTop="true"
+        android:horizontalSpacing="14dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="@integer/grid_columns"
+        android:padding="20dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="14dp" />
+</LinearLayout>

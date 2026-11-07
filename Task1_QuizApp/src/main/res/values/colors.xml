@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SaiKet Systems brand palette on a light, bright background. -->
+<resources>
+    <color name="brand_blue">#3157FF</color>
+    <color name="brand_blue_dark">#1E3FE0</color>
+    <color name="brand_cyan">#03B8D9</color>
+    <color name="brand_blue_soft">#EBF0FF</color>
+    <color name="bg">#F5F7FF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="ink">#111A3A</color>
+    <color name="ink_muted">#5B6488</color>
+    <color name="ink_faint">#98A0BF</color>
+    <color name="outline">#E2E7F6</color>
+    <color name="success">#0E9F71</color>
+    <color name="success_bg">#E5F7F0</color>
+    <color name="error">#E0424A</color>
+    <color name="error_bg">#FDECEC</color>
+    <color name="amber">#F2A100</color>
+    <color name="amber_bg">#FFF5DD</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+</resources>

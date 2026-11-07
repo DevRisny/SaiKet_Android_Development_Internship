@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Full view of the picture chosen in the GridView. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context=".ImageViewerActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="22dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/back_button"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:contentDescription="@string/back"
+            app:icon="@drawable/ic_arrow_back"
+            app:iconTint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/viewer_title"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/viewer_subtitle"
+                android:textColor="@color/white_80"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/viewer_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_glass_pill"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            tools:text="3 / 12" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="28dp"
+                app:strokeWidth="0dp">
+
+                <com.risnysuha.saiket.gallery.SquareImageView
+                    android:id="@+id/viewer_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/viewer_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/ink"
+                android:textSize="26sp"
+                tools:text="Tea Country" />
+
+            <TextView
+                android:id="@+id/viewer_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.SaiKet.Body"
+                tools:text="Green tea rows in the hill country." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_soft_pill"
+                android:paddingStart="12dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="5dp"
+                android:text="@string/original_art"
+                android:textColor="@color/brand_blue_dark"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/previous_button"
+            style="@style/Widget.SaiKet.Button.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="@string/previous"
+            app:icon="@drawable/ic_chevron_left" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="@string/next"
+            app:icon="@drawable/ic_chevron_right"
+            app:iconGravity="textEnd" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="count_format">%1$d images</string>
+    <string name="tap_hint">Tap any picture to open it</string>
+    <string name="opening_format">Opening %1$s</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="back">Back to gallery</string>
+    <string name="viewer_title">Image viewer</string>
+    <string name="viewer_subtitle">Selected from the GridView</string>
+    <string name="original_art">Original artwork drawn for this project</string>
+</resources>

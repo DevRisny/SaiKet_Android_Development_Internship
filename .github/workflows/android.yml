@@ -1,0 +1,49 @@
+name: Android CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Unit tests + build 5 APKs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Unit tests
+        run: ./gradlew testDebugUnitTest --stacktrace
+
+      - name: Build debug + release APKs
+        run: ./gradlew assembleDebug assembleRelease --stacktrace
+
+      - name: Collect APKs
+        run: |
+          mkdir -p apks
+          for m in Task1_QuizApp Task2_ImageGallery Task3_ContactsList Task4_ActivitySwitch Task5_TimerApp; do
+            cp "$m/build/outputs/apk/release/$m-release.apk" "apks/$m.apk"
+          done
+          ls -la apks
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: saiket-android-apks
+          path: apks/*.apk
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: unit-test-reports
+          path: '**/build/reports/tests/'
